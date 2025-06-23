@@ -319,7 +319,7 @@ Final payload (prettified):
                                             <\/html><\/script>`);
                 
     
-                console.log("SUCCESS! niggers");
+                console.log("SUCCESS!");
                 
                 clearInterval(interval);
                 
