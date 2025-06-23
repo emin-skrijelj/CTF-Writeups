@@ -13,6 +13,10 @@ My solution was unintended and I am guessing most of the people who had solved t
 
 I usually don't lock in for challenges this much but considering my friend made it I was determined on solving it :( . Either way I hope you enjoy the writeup and I will try to go as indepth as I can and I will write my thinking process while doing this challenge. 
 
+tldr solution; 
+
+Using grandparent iframe trick to bypass SOP and set the grandchilds iframe location to our own url,  then used about:blank as a url for which SOP allows us to just do `.document.write` and write our own stuff on the blank website. Challenge used post messages for communication which I abused via xss.
+
 ## Solution
 
 ### First look at the challenge setup and code
