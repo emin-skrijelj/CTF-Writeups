@@ -161,7 +161,7 @@ Whats interesting is the message listener, if it passes all checks it sends a re
 
 My idea for the solution was following:
 
-Do the grandparent trick (which changes the url of the iframe inside of web:1337 (explained later on)) -> send a post message from our controled domain iframe to the web:1337, 
+Do the grandparent trick (which changes the url of the iframe inside of web:1337 (explained later on)) -> send a post message from our controled domain iframe to the web:1337,  bam xss the rest is easy?
 
 I won't be providing the backend source code for either web apps because it is not related to the solution (at least in my case)
 
@@ -267,7 +267,7 @@ I immediately tried using `about:blank` instead of an url and SOP allows you to 
 
 ![alt text](image-1.png)
 
-It worked! banger. I already created a whole plan of exploiting this before it even succeded:
+Now the only thing we've got left is:
 
 Xss on web:1337 sends a post message to the listener on analytics:3000, which passes all the origin checks and I put my webhook url inside of the url of the post message. Well I was right...
 
