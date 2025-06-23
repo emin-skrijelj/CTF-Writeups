@@ -279,6 +279,7 @@ After trying with window for 1hr+ It DID NOT WORK. Turns out it was a correct so
 
 My payload :_) ; Turns out I already hade a good solution but that small string esc was tearing me up :), even tho for some reason locally it worked but eh... Again the inexpirience kicked in, instead of making a variable with payload then just using it in the document.write part I was writing the payload inside of the html which prob created all those problems in the first place...
 
+My 2am notes:
 ![alt text](image-2.png)
 
 Turns out I was supposed to use `\\\` instead of only `\` to escape a single quote `'` ... For some reason it worked for me locally but ig the error was in the post message to `analytics:3000` part which I didn't test bcs of the origin checks...
