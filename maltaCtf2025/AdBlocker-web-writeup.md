@@ -15,7 +15,7 @@ I usually don't lock in for challenges this much but considering my friend made 
 
 tldr solution; 
 
-Using grandparent iframe trick to bypass SOP and set the grandchilds iframe location to our own url,  then used about:blank as a url for which SOP allows us to just do `.document.write` and write our own stuff on the blank website. Challenge used post messages for communication which I abused via xss.
+Using grandparent iframe trick to bypass SOP and set the grandchilds iframe location to our own url. Used race conditioning to bypass iframe removal then used `about:blank` as a url for iframe and then SOP allows us to just do `.document.write` and write our own stuff on the blank website. Challenge used post messages for communication which I abused via xss.
 
 ## Solution
 
