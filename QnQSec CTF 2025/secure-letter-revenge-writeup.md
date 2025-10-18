@@ -163,7 +163,9 @@ There is `loadAnalytics` function that has variables for analytics url, itchecks
 We can also see this weird way of calling the loadAnalytics() function. This is actually an old polyfill-style async scheduling technique — a hack to defer execution asynchronously (similar to `process.nextTick` or `queueMicrotask`), often used in early polyfills or async task schedulers before native APIs were available. The "dev" comment should have gave it out :) .
 
 
-In this small code we can see an easy dom clobbering of the `cfg.analyticsURL` url being used to retrieve `analytics.js` . 
+In this small code we can see an easy dom clobbering of the `cfg.analyticsURL` url being used to retrieve `analytics.js` .
+
+Also we can see that the cookie is being sanitized and set inside `document.uid`, this is great for us because inside `data:` urls the cookies are completely disabled, and also all iframes with `data:` urls have no access to the `window.parent` values.
 
 But this would be great if the script at least ran inside the iframe? :eyes: 
 
