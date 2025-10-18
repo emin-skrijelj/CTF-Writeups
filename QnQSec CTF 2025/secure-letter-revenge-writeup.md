@@ -1,4 +1,4 @@
-## QnqSec CTF 2025 ~ Web
+## QnqSec CTF 2025 ~ Secure Letter Revenge Web
 
 Twitter: [@L3G4CY5](https://x.com/L3G4CY5)
 
